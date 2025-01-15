@@ -60,6 +60,15 @@
       "static/chunks/main-app-e3ab39d582edd22b.js",
       "static/chunks/app/loading-ddf67c92d38a0379.js"
     ],
+    "/checkout/page": [
+      "static/chunks/webpack-3f1db06c145d9582.js",
+      "static/chunks/4bd1b696-6ef63a5168659b74.js",
+      "static/chunks/517-24e5cebc6aa3e272.js",
+      "static/chunks/main-app-e3ab39d582edd22b.js",
+      "static/chunks/365-323942872b3e1110.js",
+      "static/chunks/124-dc1ef33eacb9a3e9.js",
+      "static/chunks/app/checkout/page-8d0b1e44c369800d.js"
+    ],
     "/page": [
       "static/chunks/webpack-3f1db06c145d9582.js",
       "static/chunks/4bd1b696-6ef63a5168659b74.js",
@@ -70,15 +79,6 @@
       "static/chunks/911-dfd8e1195a1b1292.js",
       "static/chunks/87-23d2685810538398.js",
       "static/chunks/app/page-eaed79cc30d8ac07.js"
-    ],
-    "/checkout/page": [
-      "static/chunks/webpack-3f1db06c145d9582.js",
-      "static/chunks/4bd1b696-6ef63a5168659b74.js",
-      "static/chunks/517-24e5cebc6aa3e272.js",
-      "static/chunks/main-app-e3ab39d582edd22b.js",
-      "static/chunks/365-323942872b3e1110.js",
-      "static/chunks/124-dc1ef33eacb9a3e9.js",
-      "static/chunks/app/checkout/page-8d0b1e44c369800d.js"
     ],
     "/admin/layout": [
       "static/chunks/webpack-3f1db06c145d9582.js",
@@ -108,14 +108,14 @@
       "static/chunks/173-cf3f652d0e6d8dae.js",
       "static/chunks/app/admin/not-found-9053f3d297a516e3.js"
     ],
-    "/admin/auth/login/page": [
+    "/admin/currencies/page": [
       "static/chunks/webpack-3f1db06c145d9582.js",
       "static/chunks/4bd1b696-6ef63a5168659b74.js",
       "static/chunks/517-24e5cebc6aa3e272.js",
       "static/chunks/main-app-e3ab39d582edd22b.js",
       "static/chunks/365-323942872b3e1110.js",
-      "static/chunks/124-dc1ef33eacb9a3e9.js",
-      "static/chunks/app/admin/auth/login/page-172d70af09723bee.js"
+      "static/chunks/911-dfd8e1195a1b1292.js",
+      "static/chunks/app/admin/currencies/page-a1337ac5a6b6f372.js"
     ],
     "/admin/categories/page": [
       "static/chunks/webpack-3f1db06c145d9582.js",
@@ -134,14 +134,14 @@
       "static/chunks/main-app-e3ab39d582edd22b.js",
       "static/chunks/app/admin/page-2be2bf535e450325.js"
     ],
-    "/admin/currencies/page": [
+    "/admin/auth/login/page": [
       "static/chunks/webpack-3f1db06c145d9582.js",
       "static/chunks/4bd1b696-6ef63a5168659b74.js",
       "static/chunks/517-24e5cebc6aa3e272.js",
       "static/chunks/main-app-e3ab39d582edd22b.js",
       "static/chunks/365-323942872b3e1110.js",
-      "static/chunks/911-dfd8e1195a1b1292.js",
-      "static/chunks/app/admin/currencies/page-a1337ac5a6b6f372.js"
+      "static/chunks/124-dc1ef33eacb9a3e9.js",
+      "static/chunks/app/admin/auth/login/page-172d70af09723bee.js"
     ],
     "/admin/products/page": [
       "static/chunks/webpack-3f1db06c145d9582.js",
