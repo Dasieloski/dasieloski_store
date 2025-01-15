@@ -2,22 +2,20 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
+    const { id } = params
     try {
-        const { id } = params
         const category = await prisma.category.findUnique({
             where: { id },
         })
 
         if (!category) {
-            return NextResponse.json({ error: 'Categoría no encontrada.' }, { status: 404 })
+            return NextResponse.json({ error: 'Categoría no encontrada' }, { status: 404 })
         }
 
         return NextResponse.json(category)
-    } catch (error: unknown) {
-        if (error instanceof Error) {
-            console.error(error.message)
-        }
-        return NextResponse.json({ error: 'Error al obtener el producto.' }, { status: 500 })
+    } catch (error) {
+        console.error(error)
+        return NextResponse.json({ error: 'Error al obtener la categoría' }, { status: 500 })
     }
 }
 
