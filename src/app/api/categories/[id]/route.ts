@@ -13,8 +13,11 @@ export async function GET(request: Request, { params }: { params: { id: string }
         }
 
         return NextResponse.json(category)
-    } catch {
-        return NextResponse.json({ error: 'Error al obtener la categoría.' }, { status: 500 })
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error(error.message)
+        }
+        return NextResponse.json({ error: 'Error al obtener el producto.' }, { status: 500 })
     }
 }
 
@@ -47,8 +50,8 @@ export async function PUT(request: Request, { params }: { params: { id: string }
         })
 
         return NextResponse.json(updatedCategory)
-    } catch (error: any) {
-        if (error.code === 'P2025') {
+    } catch (error: unknown) {
+        if (error instanceof Error) {
             return NextResponse.json(
                 { error: 'Categoría no encontrada.' },
                 { status: 404 }
@@ -67,8 +70,8 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
         })
 
         return NextResponse.json(deletedCategory)
-    } catch (error: any) {
-        if (error.code === 'P2025') {
+    } catch (error: unknown) {
+        if (error instanceof Error) {
             return NextResponse.json(
                 { error: 'Categoría no encontrada.' },
                 { status: 404 }

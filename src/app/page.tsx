@@ -164,9 +164,11 @@ const removeFromCart = (productId: string) => {
 
     const total = cart.reduce((sum, item) => sum + item.price, 0)
 
-    React.useEffect(() => {
-        document.documentElement.classList.toggle('dark', darkMode)
-    }, [])
+
+React.useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode)
+}, [darkMode])
+
 
     React.useEffect(() => {
         fetchProducts()
