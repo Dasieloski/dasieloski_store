@@ -25,8 +25,11 @@ export async function GET() {
   try {
     const categories = await prisma.category.findMany()
     return NextResponse.json(categories)
-  } catch (error) {
-    return NextResponse.json({ error: 'Error al obtener las categorías.' }, { status: 500 })
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error.message)
+    }
+    return NextResponse.json({ error: 'Error al procesar la solicitud.' }, { status: 500 })
   }
 }
 
@@ -74,8 +77,10 @@ export async function POST(request: Request) {
     })
 
     return NextResponse.json(newCategory, { status: 201 })
-  } catch (error: any) {
-    console.error(error)
-    return NextResponse.json({ error: 'Error al crear la categoría.' }, { status: 500 })
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error.message)
+    }
+    return NextResponse.json({ error: 'Error al procesar la solicitud.' }, { status: 500 })
   }
-} 
+}

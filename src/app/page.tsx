@@ -206,6 +206,7 @@ React.useEffect(() => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-background to-background/80">
+              {error && <p className="text-red-500">{error}</p>}
             <FloatingEmojis />
 
             {/* Navigation */}
